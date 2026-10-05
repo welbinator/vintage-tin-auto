@@ -1,0 +1,86 @@
+---
+const { title = "Vintage Tin Auto Sales", description = "Quality used and classic cars in Willow Island, Nebraska. Honest small-town dealer, fair prices, no pressure." } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const href = (p) => (base + p).replace(/\/+/g, "/");
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href={href("/favicon.svg")} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      document.documentElement.classList.add("js");
+      const nav = document.querySelector(".nav");
+      if (nav) {
+        const onScrollNav = () => nav.classList.toggle("scrolled", window.scrollY > 40);
+        window.addEventListener("scroll", onScrollNav, { passive: true });
+        onScrollNav();
+      }
+      const risers = Array.from(document.querySelectorAll(".rise, [data-reveal]"));
+      const io = new IntersectionObserver((es) => es.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      }), { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      risers.forEach((el) => io.observe(el));
+    </script>
+
+    <style is:global>
+      :root {
+        --paper: #f4ece0;
+        --paper-2: #ece0cf;
+        --ink: #241b16;
+        --ink-soft: #5b4d42;
+        --ox: #7c1c22;
+        --ox-dark: #5e1419;
+        --cream: #f8f2e7;
+        --chrome: #c9ccd1;
+        --steel: #2b2f36;
+        --line: #d8c9b4;
+        --gold: #b58a3c;
+        --radius: 6px;
+        --wrap: 1140px;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body { background: var(--paper); color: var(--ink); font-family: "Libre Franklin", system-ui, sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+      h1, h2, h3, .display { font-family: "Oswald", sans-serif; letter-spacing: 0.01em; line-height: 1.08; text-transform: uppercase; }
+      h2 { font-size: clamp(1.7rem, 3.4vw, 2.6rem); }
+      h3 { font-size: 1.15rem; letter-spacing: 0.03em; }
+      p { color: var(--ink-soft); }
+      a { color: inherit; text-decoration: none; }
+      .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2rem); }
+      .section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+      .eyebrow { font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.78rem; font-weight: 600; color: var(--ox); }
+      .btn { display: inline-block; font-family: "Oswald", sans-serif; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; font-size: 0.98rem; padding: 0.85rem 1.6rem; border-radius: var(--radius); border: 2px solid transparent; cursor: pointer; transition: transform .18s ease, box-shadow .2s ease, background .2s, color .2s; }
+      .btn-primary { background: var(--ox); color: var(--cream); border-color: var(--ox); box-shadow: 0 6px 18px rgba(124,28,34,.28); }
+      .btn-primary:hover { background: var(--ox-dark); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(124,28,34,.34); }
+      .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+      .btn-ghost:hover { background: var(--ink); color: var(--cream); transform: translateY(-2px); }
+      .btn-glass { background: rgba(248,242,231,.14); color: var(--cream); border-color: rgba(248,242,231,.6); backdrop-filter: blur(4px); }
+      .btn-glass:hover { background: var(--cream); color: var(--ink); transform: translateY(-2px); }
+
+      /* Reveal system (fails open without JS; respects reduced motion) */
+      html.js .rise, html.js [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+      html.js .rise.in, html.js [data-reveal].in { opacity: 1; transform: none; }
+      html.js [data-reveal][data-reveal-delay="1"] { transition-delay: .08s; }
+      html.js [data-reveal][data-reveal-delay="2"] { transition-delay: .16s; }
+      html.js [data-reveal][data-reveal-delay="3"] { transition-delay: .24s; }
+      html.js [data-reveal][data-reveal-delay="4"] { transition-delay: .32s; }
+      html.js [data-reveal][data-reveal-delay="5"] { transition-delay: .40s; }
+      @media (prefers-reduced-motion: reduce) {
+        html.js .rise, html.js [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+        * { animation: none !important; }
+        html { scroll-behavior: auto; }
+      }
+    </style>
+  </body>
+</html>
