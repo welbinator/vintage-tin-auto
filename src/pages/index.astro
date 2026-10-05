@@ -231,7 +231,7 @@ const steps = [
     .hero-bg { position: absolute; left: 0; right: 0; top: -12%; height: 124%; background-size: cover; background-position: center; transform: translate3d(0, var(--py, 0px), 0) scale(1.04); will-change: transform; animation: heroZoom 18s ease-out forwards; }
     @keyframes heroZoom { from { transform: translate3d(0, var(--py, 0px), 0) scale(1.12); } to { transform: translate3d(0, var(--py, 0px), 0) scale(1.04); } }
     .hero-scrim { position: absolute; inset: 0; background: linear-gradient(to top, rgba(28,20,16,.92) 0%, rgba(28,20,16,.55) 38%, rgba(28,20,16,.25) 70%, rgba(28,20,16,.4) 100%); }
-    .hero-inner { position: relative; z-index: 2; padding: 7rem 0 clamp(3rem, 6vw, 5rem); max-width: 760px; }
+    .hero-inner { position: relative; z-index: 2; padding: 7rem clamp(1.1rem, 4vw, 2rem) clamp(3rem, 6vw, 5rem); max-width: 760px; }
     .hero-eyebrow { color: #e9b94e; }
     .hero-title { color: var(--cream); font-size: clamp(2.6rem, 6.4vw, 5rem); margin: .6rem 0 1.1rem; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
     .hero .lede { color: #efe6d7; font-size: clamp(1.05rem, 1.7vw, 1.3rem); max-width: 620px; }
@@ -307,6 +307,15 @@ const steps = [
       .card-grid, .steps { grid-template-columns: 1fr; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; }
       .foot-contact { text-align: left; }
+      .hero { min-height: 88vh; }
+      .hero-inner { padding-top: 6rem; }
+      .hero-title { font-size: clamp(2.1rem, 9vw, 3rem); }
+      .hero .lede { font-size: 1.02rem; }
+      .hero-trust { gap: 1.1rem; margin-top: 1.8rem; }
+      .hero-trust li { font-size: .8rem; }
+      .hero-trust strong { font-size: 1.2rem; }
+      .hero-cta { gap: .7rem; }
+      .hero-cta .btn { flex: 1 1 auto; text-align: center; }
     }
   </style>
 </Layout>

@@ -1,0 +1,559 @@
+
+--- 2026-10-05T14:07:35.981Z debug
+🪵  Writing logs to "/home/highprrrr/vintage-tin-auto/.wrangler-cache/wrangler-2026-10-05_14-07-35_655.log"
+---
+
+--- 2026-10-05T14:07:35.981Z debug
+.env file not found at "/home/highprrrr/vintage-tin-auto/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-10-05T14:07:35.982Z debug
+.env file not found at "/home/highprrrr/vintage-tin-auto/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-10-05T14:07:36.091Z log
+
+ ⛅️ wrangler 4.147.0
+────────────────────
+---
+
+--- 2026-10-05T14:07:36.117Z debug
+Running autoconfig detection in /home/highprrrr/vintage-tin-auto...
+---
+
+--- 2026-10-05T14:07:36.118Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"wrangler command started","timestamp":1791209256118,"properties":{"amplitude_session_id":1791209256099,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"jsonc","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":true,"agent":null,"argsUsed":[],"argsCombination":"","sanitizedCommand":"deploy","sanitizedArgs":{"path":null},"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T14:07:36.126Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"autoconfig_process_started","timestamp":1791209256126,"properties":{"amplitude_session_id":1791209256117,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","autoConfigId":"dae9394c-ec72-43d2-8fb2-901ae92cb8c3","command":"wrangler deploy","dryRun":false,"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T14:07:36.128Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"autoconfig_detection_started","timestamp":1791209256128,"properties":{"amplitude_session_id":1791209256117,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","autoConfigId":"dae9394c-ec72-43d2-8fb2-901ae92cb8c3","command":"wrangler deploy","currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T14:07:36.133Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"autoconfig_detection_completed","timestamp":1791209256133,"properties":{"amplitude_session_id":1791209256118,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","autoConfigId":"dae9394c-ec72-43d2-8fb2-901ae92cb8c3","configured":true,"success":true,"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T14:07:36.135Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"autoconfig_process_ended","timestamp":1791209256135,"properties":{"amplitude_session_id":1791209256129,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","autoConfigId":"dae9394c-ec72-43d2-8fb2-901ae92cb8c3","command":"wrangler deploy","dryRun":false,"success":true,"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T14:07:36.172Z debug
+Starting verifyWorkerMatchesCITag() with tag: undefined, name: vintage-tin-auto
+---
+
+--- 2026-10-05T14:07:36.173Z debug
+No WRANGLER_CI_MATCH_TAG variable provided, aborting verifyWorkerMatchesCITag()
+---
+
+--- 2026-10-05T14:07:36.173Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/services/vintage-tin-auto
+---
+
+--- 2026-10-05T14:07:36.174Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.174Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.174Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.174Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:36.604Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:36.605Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.605Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.605Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:36.607Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/vintage-tin-auto/deployments
+---
+
+--- 2026-10-05T14:07:36.607Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.607Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.607Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.607Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:36.800Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:36.800Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.800Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.800Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:36.801Z info
+🌀 Building list of assets...
+---
+
+--- 2026-10-05T14:07:36.802Z info
+✨ Read 7 files from the assets directory /home/highprrrr/vintage-tin-auto/dist
+---
+
+--- 2026-10-05T14:07:36.802Z debug
+/_astro
+---
+
+--- 2026-10-05T14:07:36.803Z debug
+/favicon.ico
+---
+
+--- 2026-10-05T14:07:36.803Z debug
+/favicon.svg
+---
+
+--- 2026-10-05T14:07:36.803Z debug
+/images
+---
+
+--- 2026-10-05T14:07:36.803Z debug
+/index.html
+---
+
+--- 2026-10-05T14:07:36.803Z debug
+/images/hero.jpg
+---
+
+--- 2026-10-05T14:07:36.803Z debug
+/_astro/index.DISxf-0r.css
+---
+
+--- 2026-10-05T14:07:36.812Z info
+🌀 Starting asset upload...
+---
+
+--- 2026-10-05T14:07:36.812Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/vintage-tin-auto/assets-upload-session
+---
+
+--- 2026-10-05T14:07:36.812Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.812Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.812Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:36.812Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:38.907Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:38.907Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.907Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.907Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:38.907Z info
+🌀 Found 2 new or modified static assets to upload. Proceeding with upload...
+---
+
+--- 2026-10-05T14:07:38.909Z info
++ /index.html
+---
+
+--- 2026-10-05T14:07:38.909Z info
++ /_astro/index.DISxf-0r.css
+---
+
+--- 2026-10-05T14:07:38.913Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/assets/upload?base64=true
+---
+
+--- 2026-10-05T14:07:38.913Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.913Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.913Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.914Z debug
+BODY: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.914Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:38.916Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/assets/upload?base64=true
+---
+
+--- 2026-10-05T14:07:38.916Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.916Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.916Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.917Z debug
+BODY: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:38.917Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:39.615Z debug
+-- START CF API RESPONSE: Created 201
+---
+
+--- 2026-10-05T14:07:39.615Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.615Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.615Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:39.616Z info
+Uploaded 1 of 2 assets
+---
+
+--- 2026-10-05T14:07:39.616Z debug
+✨ /_astro/index.DISxf-0r.css
+---
+
+--- 2026-10-05T14:07:39.631Z debug
+-- START CF API RESPONSE: Created 201
+---
+
+--- 2026-10-05T14:07:39.632Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.632Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.632Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:39.632Z info
+Uploaded 2 of 2 assets
+---
+
+--- 2026-10-05T14:07:39.632Z debug
+✨ /index.html
+---
+
+--- 2026-10-05T14:07:39.632Z log
+✨ Success! Uploaded 2 files (3 already uploaded) (0.72 sec)
+
+---
+
+--- 2026-10-05T14:07:39.641Z log
+Total Upload: 0.93 KiB / gzip: 0.43 KiB
+---
+
+--- 2026-10-05T14:07:39.642Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/vintage-tin-auto/settings
+---
+
+--- 2026-10-05T14:07:39.643Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.643Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.643Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.643Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:39.835Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:39.835Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.835Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.835Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:39.837Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/vintage-tin-auto/versions
+---
+
+--- 2026-10-05T14:07:39.837Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.837Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.837Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.838Z debug
+BODY: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:39.838Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:40.295Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:40.295Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:40.295Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:40.295Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:40.296Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/vintage-tin-auto/deployments
+---
+
+--- 2026-10-05T14:07:40.296Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:40.296Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:40.296Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:40.296Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:41.041Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:41.042Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:41.042Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:41.042Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:41.043Z debug
+-- START CF API REQUEST: PATCH https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/vintage-tin-auto/script-settings
+---
+
+--- 2026-10-05T14:07:41.043Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:41.043Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:41.043Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:41.043Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:43.648Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:43.648Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:43.648Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:43.648Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:43.649Z log
+Uploaded vintage-tin-auto (7.04 sec)
+---
+
+--- 2026-10-05T14:07:43.651Z debug
+-- START CF API REQUEST: GET https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/workers/vintage-tin-auto
+---
+
+--- 2026-10-05T14:07:43.651Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:43.651Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:43.651Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:43.651Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:44.066Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:44.066Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:44.066Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:44.066Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:44.067Z debug
+-- START CF API REQUEST: POST https://api.cloudflare.com/client/v4/accounts/a3b10674bc6373a81438a11c1c93b3de/workers/scripts/vintage-tin-auto/subdomain
+---
+
+--- 2026-10-05T14:07:44.067Z debug
+QUERY STRING: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:44.067Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:44.067Z debug
+INIT: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:44.067Z debug
+-- END CF API REQUEST
+---
+
+--- 2026-10-05T14:07:46.532Z debug
+-- START CF API RESPONSE: OK 200
+---
+
+--- 2026-10-05T14:07:46.532Z debug
+HEADERS: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:46.532Z debug
+RESPONSE: omitted; set WRANGLER_LOG_SANITIZE=false to include sanitized data
+---
+
+--- 2026-10-05T14:07:46.532Z debug
+-- END CF API RESPONSE
+---
+
+--- 2026-10-05T14:07:46.533Z log
+Deployed vintage-tin-auto triggers (2.88 sec)
+---
+
+--- 2026-10-05T14:07:46.533Z log
+  https://vintage-tin-auto.james-welbes.workers.dev
+---
+
+--- 2026-10-05T14:07:46.533Z log
+Current Version ID: f2b2c272-a2fa-4d54-998a-5fd7d8860777
+---
+
+--- 2026-10-05T14:07:46.535Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"deploy worker script","timestamp":1791209266535,"properties":{"amplitude_session_id":1791209266533,"amplitude_event_id":0,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"none","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":false,"agent":null,"category":"Workers","os":"linux:x64","usesTypeScript":false,"durationMs":10375,"assetUploadDurationMs":722,"assetUploadIsBulk":true,"assetUploadFileCount":2,"assetUploadTotalBytes":25922,"currentAgentSkillsInstalled":null}}
+---
+
+--- 2026-10-05T14:07:46.537Z debug
+Metrics dispatcher: Posting data {"deviceId":"dbf91562-b2ff-4679-bfb3-a3f4182c04d9","event":"wrangler command completed","timestamp":1791209266537,"properties":{"amplitude_session_id":1791209256099,"amplitude_event_id":1,"wranglerVersion":"4.147.0","wranglerMajorVersion":4,"wranglerMinorVersion":147,"wranglerPatchVersion":0,"osPlatform":"Linux","osVersion":"#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025","nodeVersion":22,"packageManager":"npm","isFirstUsage":false,"configFileType":"jsonc","isCI":false,"isPagesCI":false,"isWorkersCI":false,"isInteractive":false,"hasAssets":true,"agent":null,"argsUsed":[],"argsCombination":"","sanitizedCommand":"deploy","sanitizedArgs":{"path":null},"durationMs":10546,"currentAgentSkillsInstalled":null}}
+---
